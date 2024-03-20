@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PanelAdministrativoPeopleContact")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ca0eea142fbd2ea2d914e32654700eb46bb29dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("PanelAdministrativoPeopleContact")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PanelAdministrativoPeopleContact")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
