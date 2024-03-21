@@ -101,23 +101,23 @@ namespace PanelAdministrativoPeopleContact.Migrations
                     Observacion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Detalle = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Estado = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdPersona = table.Column<int>(type: "int", nullable: false)
+                    PersonaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Objetivos", x => x.IdObjetivo);
                     table.ForeignKey(
-                        name: "FK_Objetivos_Personas_IdPersona",
-                        column: x => x.IdPersona,
+                        name: "FK_Objetivos_Personas_PersonaId",
+                        column: x => x.PersonaId,
                         principalTable: "Personas",
                         principalColumn: "IdPersona",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Objetivos_IdPersona",
+                name: "IX_Objetivos_PersonaId",
                 table: "Objetivos",
-                column: "IdPersona");
+                column: "PersonaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Personas_IdArea",

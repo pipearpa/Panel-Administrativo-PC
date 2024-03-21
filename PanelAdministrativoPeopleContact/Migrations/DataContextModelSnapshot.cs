@@ -87,16 +87,16 @@ namespace PanelAdministrativoPeopleContact.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("IdPersona")
-                        .HasColumnType("int");
-
                     b.Property<string>("Observacion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PersonaId")
+                        .HasColumnType("int");
+
                     b.HasKey("IdObjetivo");
 
-                    b.HasIndex("IdPersona");
+                    b.HasIndex("PersonaId");
 
                     b.ToTable("Objetivos");
                 });
@@ -173,7 +173,7 @@ namespace PanelAdministrativoPeopleContact.Migrations
                 {
                     b.HasOne("PanelAdministrativoPeopleContact.Persona", "Persona")
                         .WithMany()
-                        .HasForeignKey("IdPersona")
+                        .HasForeignKey("PersonaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -29,7 +29,7 @@ namespace PanelAdministrativoPeopleContact.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<Persona>>> AddHero(Persona persona)
+        public async Task<ActionResult<List<Persona>>> AddPersona(Persona persona)
         {
             _context.Personas.Add(persona);
             await _context.SaveChangesAsync();

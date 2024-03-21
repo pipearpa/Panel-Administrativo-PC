@@ -393,7 +393,7 @@
   },
   {
     "ContainingType": "PanelAdministrativoPeopleContact.Controllers.PersonaController",
-    "Method": "AddHero",
+    "Method": "AddPersona",
     "RelativePath": "api/Persona",
     "HttpMethod": "POST",
     "IsController": true,

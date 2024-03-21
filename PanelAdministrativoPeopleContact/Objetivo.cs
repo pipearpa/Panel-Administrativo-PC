@@ -13,10 +13,17 @@ namespace PanelAdministrativoPeopleContact
         public string Detalle { get; set; } = string.Empty;
         public string Estado { get; set; } = string.Empty;
 
-        [ForeignKey("Persona")]
+        [ForeignKey("Perosna")]
+       
         public int IdPersona { get; set; }
         [JsonIgnore]
         public Persona Persona { get; set; } = null!;
+
+       
+
+
+
+
 
 
 

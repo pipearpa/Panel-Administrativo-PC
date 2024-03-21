@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿    using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PanelAdministrativoPeopleContact
@@ -25,8 +25,9 @@ namespace PanelAdministrativoPeopleContact
         public int IdArea { get; set; }
         public Area Area { get; set; } = null!;
 
-        
-
         public ICollection<Objetivo> Objetivos { get; set; } = new List<Objetivo>();
+
+
+
     }
 }

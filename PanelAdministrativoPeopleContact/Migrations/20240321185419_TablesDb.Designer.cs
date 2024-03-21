@@ -11,7 +11,7 @@ using PanelAdministrativoPeopleContact.Data;
 namespace PanelAdministrativoPeopleContact.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240320164252_TablesDb")]
+    [Migration("20240321185419_TablesDb")]
     partial class TablesDb
     {
         /// <inheritdoc />
@@ -90,16 +90,16 @@ namespace PanelAdministrativoPeopleContact.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("IdPersona")
-                        .HasColumnType("int");
-
                     b.Property<string>("Observacion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PersonaId")
+                        .HasColumnType("int");
+
                     b.HasKey("IdObjetivo");
 
-                    b.HasIndex("IdPersona");
+                    b.HasIndex("PersonaId");
 
                     b.ToTable("Objetivos");
                 });
@@ -176,7 +176,7 @@ namespace PanelAdministrativoPeopleContact.Migrations
                 {
                     b.HasOne("PanelAdministrativoPeopleContact.Persona", "Persona")
                         .WithMany()
-                        .HasForeignKey("IdPersona")
+                        .HasForeignKey("PersonaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
